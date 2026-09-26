@@ -3,7 +3,7 @@ import * as SecureStore from 'expo-secure-store';
 
 // Cambia esta IP por la IP local de tu PC cuando pruebes en el teléfono físico.
 // Si usas el emulador de Android, usa 10.0.2.2 en lugar de localhost.
-const BASE_URL = 'http://192.168.20.37:3000/api';
+const BASE_URL = 'https://volvemos-api.onrender.com/api';
 
 // Creamos una instancia de axios con la URL base
 const api = axios.create({
