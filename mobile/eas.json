@@ -1,7 +1,8 @@
 {
   "cli": {
     "version": ">= 24.8.0",
-    "appVersionSource": "remote"
+    "appVersionSource": "remote",
+    "requireCommit": false
   },
   "build": {
     "development": {
@@ -12,8 +13,7 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
-      },
-      "node": "22.0.0"
+      }
     },
     "production": {
       "autoIncrement": true,
