@@ -26,9 +26,7 @@
     },
     "scheme": "volvemos",
     "plugins": [
-      "expo-router",
-      "expo-secure-store",
-      "expo-status-bar"
+      "expo-router"
     ],
     "newArchEnabled": false,
     "extra": {
