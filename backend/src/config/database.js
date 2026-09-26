@@ -1,8 +1,6 @@
 const mysql = require('mysql2');
 require('dotenv').config();
 
-// Creamos un pool de conexiones en lugar de una sola conexión.
-// Un pool reutiliza conexiones automáticamente, lo que es más eficiente.
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -11,7 +9,10 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT || 3306,
   waitForConnections: true,
   connectionLimit: 10,
+  // Clever Cloud requiere SSL para conexiones remotas
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
-// .promise() nos permite usar async/await en lugar de callbacks
 module.exports = pool.promise();
